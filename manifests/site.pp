@@ -1,10 +1,8 @@
 node default {
+  $test="This is a rob readme\nand second line\nlast line making it third line\n"
   file {'/root/README':
     ensure  => file,
-    content => | This is a rob readme
-                 and second line
-                 last line making it third line
-                 ,
+    content => $test,
     owner   => 'root',
   }
 }
